@@ -75,8 +75,13 @@ void pattern6(int n){
         }
         cout<<endl;
 }}  
-*/
+
 void pattern7(int n){
+//     *    
+//    ***   
+//   *****  
+//  ******* 
+// *********
     for (int i=0;i<n;i++){
         for(int j=0;j<n-i-1;j++){
             cout<<" ";
@@ -92,6 +97,28 @@ void pattern7(int n){
     }
 
 }
+void pattern8(int n){
+// *********
+//  ******* 
+//   *****
+//    ***
+//     *
+    for (int i=0;i<n;i++){
+        for(int j=0;j<i;j++){
+            cout<<" ";
+        }
+        for(int j=0;j<(2*n)-(2*i+1);j++){
+            cout<<"*";
+        
+        }
+        for(int j=0;j<i;j++){
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+
+}
+*/
 int main(){
     int n;
     cout<<"Enter the value:";
@@ -103,7 +130,9 @@ int main(){
 // pattern4(n);
 //pattern5(n);
 //pattern6(n);
-pattern7(n);
-   
+// pattern7(n);
+// pattern8(n); 
+
+
     return 0;
 }
