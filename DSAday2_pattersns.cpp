@@ -12,6 +12,7 @@ using namespace std;
         }
         cout<<endl;
 }}
+
 void pattern2(int n){
 // * 
 // * * 
@@ -24,6 +25,7 @@ void pattern2(int n){
         }
         cout<<endl;
 }}  
+
 void pattern3(int n){
 // 1 
 // 1 2 
@@ -36,6 +38,7 @@ void pattern3(int n){
         }
         cout<<endl;
 }}  
+
 void pattern4(int n){
 // 1
 // 2 2
@@ -72,6 +75,7 @@ void pattern6(int n){
         }
         cout<<endl;
 }}  
+
 void pattern7(int n){
 //     *    
 //    ***   
@@ -91,6 +95,7 @@ void pattern7(int n){
         }
         cout<<endl;
     }
+
 }
 void pattern8(int n){
 // *********
@@ -111,6 +116,7 @@ void pattern8(int n){
         }
         cout<<endl;
     }
+
 }
 */
 int main(){
