@@ -118,6 +118,41 @@ void pattern8(int n){
     }
 
 }
+void pattern9(int n){
+// *
+// **
+// ***
+// ****
+// *****
+// ****
+// ***
+// **
+// *
+    for(int i=1;i<=2*n-1;i++){
+       int star=i;
+        if(i>n) star=2*n-i; 
+        for(int j=1;j<=star;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
+void pattern10(int n){
+// 1
+// 01
+// 101
+// 0101
+// 10101
+    int start=1;
+    for(int i=1;i<=n;i++){
+        if(i%2!=0) start=1;
+        else start=0;
+        for(int j=1;j<=i;j++){
+            cout<<start;
+            start=1-start;
+        }
+cout<<endl;
+    }
 */
 int main(){
     int n;
@@ -132,7 +167,8 @@ int main(){
 //pattern6(n);
 // pattern7(n);
 // pattern8(n); 
-
+// pattern9(n); 
+// pattern10(n); 
 
     return 0;
 }
