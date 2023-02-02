@@ -126,10 +126,54 @@ q.pop();
 cout<<q.front()<<endl;
 q.pop();
 cout<<q.front()<<endl;
-}*/
-void Priority_Queue(){
+}
+void exp_Priority_Queue(){
+    priority_queue<int>pq;
+    pq.push(9);
+    pq.push(3);
+    pq.push(6);
+    pq.push(2);
+    cout<<pq.top()<<endl;
+    pq.pop();
+    cout<<pq.top()<<endl;
+
+    //minimum heap
+    priority_queue<int, vector<int>,greater<int>> pq1;
+    pq1.push(4);
+    pq1.push(6);
+    pq1.push(2);
+    pq1.push(9);
+    cout<<pq1.top()<<endl;
+    pq1.pop();
+    cout<<pq1.top()<<endl;
+}
+void exp_Set(){
+    set<int> st;
+    st.insert(5);
+    st.insert(3);
+    st.insert(7);
+    st.emplace(2);
+    auto it=st.find(3);
+    st.erase(3);
+for(auto it:st){
+    cout<<it<<" ";
+}
 
 }
+void exp_Multiset(){
+    multiset<int> ms;
+    ms.insert(2);
+    ms.insert(5);
+    ms.insert(2);
+    ms.insert(5);
+    ms.erase(2);
+    ms.erase(ms.find(2),ms.find(2));
+    for(auto it:ms){
+        cout<<it<<" ";
+    }
+}
+*/
+
 int main() {
   // exp_Pair();
   // exp_Vector();
@@ -137,6 +181,16 @@ int main() {
   // exp_Dequeue();
   // exp_Stack();
  // exp_Queue();
+ //exp_Priority_Queue();
+ //exp_Set();
+ //exp_Multiset();
+ int arr[6]={3,2,7,1,6,8};
+ int n=sizeof(arr)/sizeof(arr[0]);
+ sort(arr,arr+n);
+ for(int i=0;i<n;i++){
+    cout<<arr[i]<<" ";
+ }
+
  exp_Priority_Queue();
   return 0;
 }
