@@ -190,6 +190,48 @@ int main() {
  for(int i=0;i<n;i++){
     cout<<arr[i]<<" ";
  }
+    //  int arr[6]={3,2,7,1,6,8};
+//  int n=sizeof(arr)/sizeof(arr[0]);
+//  sort(arr,arr+n);
+//  for(int i=0;i<n;i++){
+//     cout<<arr[i]<<" ";
+//  }
+
+// int n;
+// cout<<"Enter the no.:";
+// cin>>n;
+//  int arr[n];
+//  for (int i=1;i<=n;i++){
+//     cin>>arr[i];
+//  }
+// for (int i=1;i<=n;i++){
+//     cout<<arr[i]<<" ";
+// }
+// for (int i=1;i<=n;i++){
+//     if (arr[1]<arr[i]){
+//         arr[1]=arr[i];
+//     }
+// }
+// cout<<"Largest No. :"<<arr[1];
+    
+//prime no. print logic
+int n;
+cout<<"Enter the no.:";
+cin>>n;
+int count=0;
+    for(int i=1;i<=n;i++){
+        for(int j=2;j<i;j++){
+            if(i%j==0){
+                count++;
+                break;
+            }
+        }
+        if(count==0&& i!=1){
+            cout<<i<<" ";
+        }
+        count=0;
+    }
+
 
  exp_Priority_Queue();
   return 0;
