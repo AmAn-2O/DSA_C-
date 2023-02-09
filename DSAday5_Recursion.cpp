@@ -28,8 +28,19 @@ void backtracking(int n,int m){
     if(n<1) return ;
     backtracking(n-1,m);
     cout<<n<<" ";
+}
+//print from 1 to N without using (n+1,m) do(using backtracking)
+void backtracking(int i,int n){
+    if(n<i) return ;
+    backtracking(i+1,n);
+    cout<<i<<" ";
 }*/
-
+//print from 1 to N without using (n+1,m) do(using backtracking)
+void backtracking(int n,int m){
+    if(n<1) return ;
+    backtracking(n-1,m);
+    cout<<n<<" ";
+}
 //print from N to 1 without using (m-1,n) do(using backtracking)
 int main(){
     int n=5;
@@ -37,7 +48,7 @@ int main(){
 //print_digit(1,n);
 // print_revOdigit(n,1);
 //backtracking(n,n);
-backtracking(n,n);
+backtracking(n,1);
 
     return 0;
 }
