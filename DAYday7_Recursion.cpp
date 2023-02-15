@@ -1,5 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
+int fib(int n){
+    if(n<=1) return n;
+    int first=fib(n-1);
+    int second=fib(n-2);
+    return first+second;
+}
 bool check_str_palindrome(int i,string &s){
     if (i>=s.size()/2) return true ;
     if(s[i]!=s[s.size()-i-1])
@@ -17,7 +23,7 @@ void rev_arr_app1(int l, int arr[],int r){
     rev_arr(l+1,arr,r-1);
 }
 int main(){
-reverse of an array with the help of recursion
+// reverse of an array with the help of recursion
 int n;
 cin>>n;
 int arr[n];
@@ -32,5 +38,6 @@ for(int i=0;i<n;i++){
 string s;
 s="MADAM";
 cout<<check_str_palindrome(0,s);
+cout<<fib(n);
     return 0;
 }
