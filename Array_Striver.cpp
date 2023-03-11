@@ -50,7 +50,7 @@ for(int i=1;i<n;i++){
         slarge=large;
         large=arr[i];
     }
-    else if(arr[i]!=large && arr[i]>large){
+    else if(arr[i]!=large && arr[i]>slarge){
         slarge=arr[i];
     }
 }
