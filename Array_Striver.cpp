@@ -10,24 +10,24 @@ int main(){
     }
 //Finding the largest number in the list {Brute Force}
 
-// sort(arr,arr+n);
-// cout<<"Largest No. is: "<<arr[n-1];
+sort(arr,arr+n);
+cout<<"Largest No. is: "<<arr[n-1];
 
 //Finding the largest number in the list {Optimal Solution}
-// int large=arr[0];
-// for(int i=0;i<n;i++){
-//     if(arr[i]>large)  large=arr[i];
-// }
-// cout<<"Largest No. Is: "<<large;
+int large=arr[0];
+for(int i=0;i<n;i++){
+    if(arr[i]>large)  large=arr[i];
+}
+cout<<"Largest No. Is: "<<large;
 
 //Finding the Second largest number in the list {Brute Force}
-// sort(arr,arr+n);
-// int largest=arr[n-1];
-// int second=arr[0];
-// for(int i=0;i<n;i++){
-//     if(arr[i]!=largest)  second=arr[i];
-// }
-// cout<<"Second Largest No. Is:"<<second;
+sort(arr,arr+n);
+int largest=arr[n-1];
+int second=arr[0];
+for(int i=0;i<n;i++){
+    if(arr[i]!=largest)  second=arr[i];
+}
+cout<<"Second Largest No. Is:"<<second;
 
 //Finding the Second largest number in the list {Better solution}
 int large=arr[0];
@@ -41,5 +41,19 @@ for(int i=0;i<n;i++){
     }   
 }
 cout<<"Second  Largest No. is: "<<second_large;
+    
+ //Finding the Second largest number in the list {optimal solution}
+int large=arr[0];
+int slarge=INT_MIN;
+for(int i=1;i<n;i++){
+    if(arr[i]>large){
+        slarge=large;
+        large=arr[i];
+    }
+    else if(arr[i]!=large && arr[i]>large){
+        slarge=arr[i];
+    }
+}
+cout<<"Second  Largest No. is: "<<slarge;
     return 0;
 }
