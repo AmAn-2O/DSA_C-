@@ -87,7 +87,7 @@ int main(){
     int n=sizeof(arr)/sizeof(int);
     cout<<"Enter The Elements Array:";
     for(int i=0;i<n;i++){
-        cin>>arr[i];
+        cin>> arr[i];
     }
 
 //WAP TO RIGHT ROTATE THE ARRAY BY ONE PLACE  
