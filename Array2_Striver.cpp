@@ -65,7 +65,7 @@ void leftrotate_array_dplace(int arr[],int n, int d){
     for(int i=0;i<n;i++){
         cout<<arr[i];
     }
-}*/
+} */
 void rightrotate_array_oneplace(int arr[],int n){
     int temp=arr[n-1];
     for(int i=n-1;i>0;i--){
