@@ -7,7 +7,7 @@ cout<<"Enter the N:";
 cin>>n;
 int arr[n];
 for(int i=0;i<n;i++){
-    cin>>arr[i];
+    cin>>arr[i ];
 }
 for(int i=0;i<n-1;i+=2){
         int temp=arr[i];
