@@ -65,7 +65,7 @@ void leftrotate_array_dplace(int arr[],int n, int d){
     for(int i=0;i<n;i++){
         cout<<arr[i];
     }
-} */
+}
 void rightrotate_array_oneplace(int arr[],int n){
     int temp=arr[n-1];
     for(int i=n-1;i>0;i--){
@@ -81,13 +81,48 @@ void rightrotate_array_dplace(int arr[],int n, int k){
         cout<<arr[i]<<" ";
     }
 }
+*/
+//Brute Force
+vector<int> sort_zeros_toend(int n, int arr[]){
+    vector<int>temp;
+    int n1=sizeof(temp)/sizeof(int);
+    for(int i=0;i<n;i++){
+        if(arr[i]!=0){
+            temp.push_back(arr[i]);
+        }
+    }
+    
+    for(int i=0;i<temp.size();i++){
+        arr[i]=temp[i];
+    }
+    for(int i=temp.size();i<n;i++){
+        arr[i]=0;
+    }
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<endl;
+    }
+    
+}
+void sort_zeros_toend_optimal(int n, int arr[]){
+   int j=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]!=0){
+        swap(arr[i],arr[j]);
+        j++;
+        }
+    }
 
+    for(int i=0;i<n;i++){
+        cout<<arr[i]<<endl;
+    }
+    
+}
 int main(){
-    int arr[5];
+    int arr[6];
     int n=sizeof(arr)/sizeof(int);
     cout<<"Enter The Elements Array:";
     for(int i=0;i<n;i++){
-        cin>> arr[i];
+        cin>>arr[i];
     }
 
 //WAP TO RIGHT ROTATE THE ARRAY BY ONE PLACE  
@@ -110,10 +145,18 @@ int main(){
 // leftrotate_array_dplace(arr,n,d);
 
 //WAP TO RIGHT ROTATE THE ARRAY BY D PLACE{Brute Force}
-int k;
-cout<<"Rotate The Array By K Place:";
-cin>>k;
-rightrotate_array_dplace(arr,n,k);
+// int k;
+// cout<<"Rotate The Array By K Place:";
+// cin>>k;
+// rightrotate_array_dplace(arr,n,k);
+
+//WAP TO MOVE ALL ZEROS TO LEFT by brute Force Approach
+sort_zeros_toend(n, arr);
+
+//WAP TO MOVE ALL ZEROS TO LEFT by optimal Approach
+sort_zeros_toend_optimal(n, arr);
+
+
 
     return 0;
 }
