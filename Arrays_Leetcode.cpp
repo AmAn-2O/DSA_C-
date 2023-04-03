@@ -2,7 +2,7 @@
 using namespace std;
 int main(){
 //SWAP ALTERNATE ELEMENTS OF AN ARRAY
-int n;
+int n ;
 cout<<"Enter the n:";
 cin>>n;
 int arr[n];
