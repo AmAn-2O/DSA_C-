@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 
-int find_missingNo_Optimal1(int n, int arr1[]){
+int find_missingNo_Optimal1(int n, int  arr1[]){
     int sum=n*(n+1)/2;
     int s1=0;
     for(int i=0;i<n-1;i++){
@@ -53,7 +53,7 @@ int main(){
     int n=sizeof(arr)/sizeof(int);
     cout<<"Enter The Elements:";
     for(int i=0;i<n;i++){
-        cin>>arr[i];
+        cin>>arr[ i];
     }
     cout<<find_missingNo_bruteforce(n,arr)<<endl;
      cout<<find_missingNo_better(n,arr)<<endl;
