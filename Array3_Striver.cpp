@@ -23,7 +23,7 @@ int find_missingNo_Optimal2(int n, int arr1[]){
 }
 
 
-int find_missingNo_better(int n,int arr1[]){
+int find_missingNo_better (int n,int arr1[]){
     int hash[n+1]={0};
     for(int i=0;i<n;i++){
         hash[arr1[i]]=1;
