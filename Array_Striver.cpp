@@ -23,7 +23,7 @@ cout<<"Largest No. Is: "<<large;
 //Finding the Second largest number in the list {Brute Force}
 sort(arr,arr+n);
 int largest=arr[n-1];
-int second=arr[0];
+int second=arr[0]; 
 for(int i=0;i<n;i++){
     if(arr[i]!=largest)  second=arr[i];
 }
