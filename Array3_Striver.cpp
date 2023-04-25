@@ -18,7 +18,7 @@ int find_missingNo_Optimal2(int n, int arr1[]){
     for(int i=1;i<n;i++){
         xor2=xor2^arr1[i];
     }
-     return xor1^xor2;
+     return xor1 ^xor2;
 
 }
 
