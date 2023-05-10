@@ -8,7 +8,7 @@ int linear_Search(int arr[],int  n,int number){
 }
 vector<int> find_Un(int arr1[], int arr2[], int n1,int n2){
     set<int> st;
-    for(int i=0;i<n1;i++){
+    for(int i=0;i<n1;vi++){
         st.insert(arr1[i]);
     }
     for(int i=0;i<n2;i++){
